@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- handle: top-center anchored at circle edge (17.5,17.5), rotated 45° so it goes toward bottom-right -->
+  <rect x="-2.5" y="0" width="5" height="9" rx="2.5"
+        fill="#b06820" stroke="#1a1210" stroke-width="1.5"
+        transform="translate(17.5,17.5) rotate(-45)"/>
+  <!-- paddle face (red rubber) — rendered on top to cover the joint -->
+  <circle cx="11" cy="11" r="9" fill="#e84040" stroke="#1a1210" stroke-width="2"/>
+  <!-- shine -->
+  <circle cx="7.5" cy="7.5" r="2" fill="white" opacity="0.35"/>
+</svg>

@@ -1,0 +1,441 @@
+/* ── Layout ─────────────────────────────────────── */
+.landing {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Header ─────────────────────────────────────── */
+.l-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.l-logo-icon { font-size: 2rem; line-height: 1; }
+
+.l-logo-title {
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-shadow: 3px 3px 0 var(--border);
+  letter-spacing: 0.1em;
+  flex: 1;
+}
+
+.l-logo-season {
+  font-size: 0.7rem;
+  color: var(--text2);
+  letter-spacing: 0.05em;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+/* pixel grid background */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--bg2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg2) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero > * { position: relative; }
+
+.hero-eyebrow {
+  font-size: 0.58rem;
+  color: var(--accent2);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  color: var(--text);
+  text-shadow: 4px 4px 0 var(--border2);
+}
+
+.hero-desc {
+  font-size: 0.75rem;
+  color: var(--text2);
+  line-height: 2;
+  max-width: 520px;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.h-badge {
+  font-size: 0.65rem;
+  padding: 0.35rem 0.7rem;
+  border: 2px solid var(--border);
+  background: var(--bg2);
+  color: var(--text);
+  box-shadow: 2px 2px 0 var(--border);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.h-badge-prize {
+  background: var(--gold);
+  color: #fff;
+  border-color: #a07800;
+  box-shadow: 2px 2px 0 #a07800;
+}
+
+/* ── Hero player counter ────────────────────────── */
+.hero-players {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--bg2);
+}
+
+.hero-players-num {
+  font-size: 2.5rem;
+  color: var(--accent3);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.hero-players-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hero-players-label {
+  font-size: 0.5rem;
+  color: var(--text2);
+  letter-spacing: 0.1em;
+}
+
+.hero-players-rounds {
+  font-size: 0.6rem;
+  color: var(--text);
+  letter-spacing: 0.06em;
+}
+
+.hero-players-hint {
+  font-size: 0.45rem;
+  color: var(--text2);
+  letter-spacing: 0.08em;
+}
+
+/* ── Countdown ──────────────────────────────────── */
+.countdown {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.countdown-label {
+  font-size: 0.55rem;
+  color: var(--text2);
+  letter-spacing: 0.12em;
+}
+
+.countdown-date {
+  font-size: clamp(0.45rem, 3vw, 0.75rem);
+  color: var(--text);
+  letter-spacing: 0.06em;
+  text-align: center;
+  max-width: 100%;
+}
+
+.countdown-units {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.count-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.count-val {
+  font-size: 1.4rem;
+  color: var(--accent);
+  line-height: 1;
+  min-width: 2.5ch;
+  text-align: center;
+}
+
+.count-label {
+  font-size: 0.45rem;
+  color: var(--text2);
+  letter-spacing: 0.1em;
+}
+
+.countdown-sep {
+  font-size: 1.2rem;
+  color: var(--border2);
+  line-height: 1;
+  padding-top: 0.05rem;
+}
+
+.countdown-started {
+  font-size: 0.7rem;
+  color: var(--accent3);
+  letter-spacing: 0.08em;
+}
+
+/* ── How It Works ───────────────────────────────── */
+.hiw {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hiw-title {
+  font-size: 1rem;
+  color: var(--text);
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 0 var(--border2);
+}
+
+.hiw-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.hiw-step {
+  padding: 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step-num {
+  font-size: 1.6rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.step-title {
+  font-size: 0.7rem;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.step-desc {
+  font-size: 0.6rem;
+  color: var(--text2);
+  line-height: 2;
+}
+
+/* ── Auth ───────────────────────────────────────── */
+.auth-section {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+}
+
+.auth-tabs {
+  display: flex;
+  border-bottom: 3px solid var(--border);
+}
+
+.auth-tab-btn {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-family: var(--pixel);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  background: var(--bg2);
+  color: var(--text2);
+  border: none;
+  border-right: 3px solid var(--border);
+}
+
+.auth-tab-btn:last-child { border-right: none; }
+
+.auth-tab-btn:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.auth-tab-btn.active {
+  background: var(--accent);
+  color: #fff;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+/* ── Form fields ────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field-label {
+  font-size: 0.65rem;
+  color: var(--text2);
+  letter-spacing: 0.08em;
+}
+
+.field-input {
+  font-family: var(--pixel);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--bg2);
+  padding: 0.6rem 0.8rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.field-input::placeholder {
+  color: var(--border2);
+  opacity: 1;
+}
+
+.field-input:focus {
+  background: var(--surface);
+  outline: 3px solid var(--accent);
+  outline-offset: 0;
+}
+
+.field-error {
+  font-size: 0.6rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.field.has-error .field-input {
+  outline: 3px solid var(--accent);
+}
+
+/* ── Buttons ────────────────────────────────────── */
+.btn-primary {
+  font-family: var(--pixel);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--accent);
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  padding: 0.75rem 1.2rem;
+  margin-top: 0.4rem;
+  width: 100%;
+  transition: none;
+}
+
+.btn-primary:hover {
+  background: #c83030;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+.btn-primary:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+/* ── Success state ──────────────────────────────── */
+.auth-success {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.success-icon { font-size: 3rem; line-height: 1; }
+
+.success-title {
+  font-size: 1rem;
+  color: var(--accent3);
+  letter-spacing: 0.1em;
+}
+
+.success-desc {
+  font-size: 0.65rem;
+  color: var(--text2);
+  line-height: 2;
+  max-width: 320px;
+}
+
+.success-desc strong {
+  color: var(--text);
+}
+
+/* ── Footer ─────────────────────────────────────── */
+.l-footer {
+  padding: 0.75rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 0.7rem;
+  color: var(--text2);
+  letter-spacing: 0.05em;
+  flex-wrap: wrap;
+}
+
+.legend-sep { color: var(--border2); }
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 700px) {
+  .hiw-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title { font-size: 2rem; }
+}
+
+@media (max-width: 420px) {
+  .hiw-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .l-logo-title { font-size: 1rem; }
+  .hero-title   { font-size: 1.5rem; }
+
+  .hero { padding: 1.5rem 1rem; }
+}

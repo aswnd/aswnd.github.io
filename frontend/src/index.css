@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f5f0e8;
+  --bg2: #ede8dc;
+  --surface: #fff9ee;
+  --border: #2a1f1f;
+  --border2: #5c4a3a;
+  --accent: #e84040;
+  --accent2: #ff7a1a;
+  --accent3: #2a8c4a;
+  --text: #1a1210;
+  --text2: #5c4a3a;
+  --gold: #c8960c;
+  --silver: #7a8a9a;
+  --bronze: #b06030;
+  --pixel: 'Press Start 2P', monospace;
+  --shadow: 4px 4px 0px var(--border);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--pixel);
+  font-size: 12px;
+  line-height: 1.8;
+  min-height: 100vh;
+  -webkit-font-smoothing: none;
+  cursor: url('/cursor-paddle.svg') 11 11, auto;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 10px; }
+}
+
+a, button, [role="button"], input, select, label {
+  cursor: url('/cursor-paddle.svg') 11 11, pointer;
+}
+
+/* Emoji / symbol characters fall back to system font with wrong metrics.
+   Wrap them in .sym to normalise size and vertical alignment. */
+.sym {
+  font-family: system-ui, sans-serif;
+  font-size: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  top: -0.1em;
+}
+
+.pixel-box {
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+/* ── Rules / FAQ (shared) ───────────────────────── */
+.rules {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rules-title {
+  font-size: 0.8rem;
+  color: var(--text);
+  letter-spacing: 0.08em;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-item {
+  border-top: 2px solid var(--bg2);
+}
+
+.rule-item:last-child {
+  border-bottom: 2px solid var(--bg2);
+}
+
+.rule-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-align: left;
+  color: var(--text);
+  font-family: var(--pixel);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+.rule-q:hover { color: var(--accent); }
+.rule-q-text { flex: 1; }
+
+.rule-chevron {
+  font-family: system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.rule-a {
+  font-size: 0.6rem;
+  color: var(--text2);
+  line-height: 2.2;
+  padding-bottom: 0.85rem;
+  padding-right: 1.5rem;
+}
+
+.pixel-box-inset {
+  border: 3px solid var(--border);
+  box-shadow: inset 2px 2px 0px var(--border2);
+  background: var(--bg2);
+}
