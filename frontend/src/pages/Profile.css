@@ -163,14 +163,14 @@
 
 .profile-name-input {
   font-family: var(--pixel);
-  font-size: 1rem; /* ≥16px prevents iOS auto-zoom on focus */
+  font-size: 0.85rem;
   color: var(--text);
   background: var(--bg2);
   border: none;
   padding: 0.5rem 0.75rem;
 }
-@media (min-width: 601px) {
-  .profile-name-input { font-size: 0.85rem; }
+@media (max-width: 600px) {
+  .profile-name-input { font-size: 16px; } /* ≥16px prevents iOS auto-zoom on focus */
 }
 .profile-name-input:focus { outline: 3px solid var(--accent); }
 

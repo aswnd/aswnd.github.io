@@ -266,7 +266,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 1rem 1rem 0.5rem;
+  padding: 1rem 1rem 0;
 }
 
 .chat-messages {
@@ -300,28 +300,38 @@
   gap: 0.5rem;
   padding: 0.6rem;
   flex-shrink: 0;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 .chat-input {
   flex: 1;
+  min-width: 0; /* allow flex shrink so send button stays visible */
   font-family: var(--pixel);
-  font-size: 1rem; /* ≥16px prevents iOS auto-zoom on focus */
+  font-size: 0.7rem;
   color: var(--text);
   background: var(--bg2);
   border: none;
   padding: 0.6rem 0.75rem;
 }
-
-@media (min-width: 601px) {
-  .chat-input {
-    font-size: 0.7rem;
-  }
+@media (max-width: 600px) {
+  .chat-input { font-size: 16px; } /* ≥16px prevents iOS auto-zoom on focus */
 }
 .chat-input::placeholder { color: var(--border2); opacity: 1; }
 .chat-input:focus { outline: 3px solid var(--accent); }
 
-.chat-send-btn { flex: 0 0 auto; padding: 0.6rem 1rem; font-size: 0.85rem; white-space: nowrap; }
+.chat-send-btn {
+  flex: 0 0 auto;
+  font-family: var(--pixel);
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--accent);
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chat-send-btn:hover { background: #c83030; transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--border); }
 
 /* ── Publish section ────────────────────────────── */
 .publish-section {

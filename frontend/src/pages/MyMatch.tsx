@@ -478,7 +478,7 @@ function Chat({ messages, onSend }: { messages: Message[]; onSend: (t: string) =
           value={input}
           onChange={e => setInput(e.target.value)}
         />
-        <button type="submit" className="chat-send-btn btn-primary">&gt;</button>
+        <button type="submit" className="chat-send-btn">&gt;</button>
       </form>
     </div>
   )
