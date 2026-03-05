@@ -82,11 +82,16 @@ function CountUnit({ value, label }: { value: number; label: string }) {
 }
 
 function LandingHeader() {
+  const navigate = useNavigate()
   return (
     <header className="l-header pixel-box">
       <span className="l-logo-icon">🏓</span>
       <h1 className="l-logo-title">TUBNAMENT</h1>
       <span className="l-logo-season">SS 2026</span>
+      <button className="l-view-btn pixel-box" onClick={() => navigate('/tournament')}>
+        <span className="l-view-badge">PREVIEW</span>
+        VIEW TOURNAMENT &gt;
+      </button>
     </header>
   )
 }
@@ -104,7 +109,7 @@ function Hero() {
         <span className="h-badge"><span className="sym">🏆</span> SWISS SYSTEM</span>
         <span className="h-badge"><span className="sym">📱</span> ASYNC PLAY</span>
         <span className="h-badge"><span className="sym">🎓</span> TU BERLIN ONLY</span>
-        <span className="h-badge h-badge-prize"><span className="sym">💶</span> 50 EUR PRIZE</span>
+        <span className="h-badge h-badge-prize"><span className="sym">💶</span> 30 EUR PRIZE</span>
       </div>
       <div className="hero-players">
         <span className="hero-players-num">{REGISTERED_PLAYERS}</span>

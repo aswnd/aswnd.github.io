@@ -32,6 +32,46 @@
   letter-spacing: 0.05em;
 }
 
+.l-view-btn {
+  font-family: var(--pixel);
+  font-size: 0.55rem;
+  color: var(--text);
+  background: var(--bg);
+  border: none;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+.l-view-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.l-view-badge {
+  font-family: var(--pixel);
+  font-size: 0.45rem;
+  background: #f59e0b;
+  color: #000;
+  padding: 0.15rem 0.35rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .l-header {
+    flex-wrap: wrap;
+  }
+  .l-logo-title {
+    flex: 1;
+  }
+  .l-view-btn {
+    width: 100%;
+    text-align: center;
+    order: 3;
+  }
+}
+
 /* ── Hero ───────────────────────────────────────── */
 .hero {
   padding: 2.5rem 2rem;
